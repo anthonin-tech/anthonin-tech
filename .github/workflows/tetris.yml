@@ -31,6 +31,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/trophies.py -u "${{ github.repository_owner }}" -o assets/trophies.svg
 
+      - name: Générer les langages par dépôt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/langs.py -u "${{ github.repository_owner }}" -o assets/langs.svg
+
       - name: Commit des SVG
         run: |
           git config user.name "github-actions[bot]"
