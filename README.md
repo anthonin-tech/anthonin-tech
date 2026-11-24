@@ -22,7 +22,7 @@
 
 ## 🏆 Trophées GitHub
 
-![Trophées GitHub](https://github-profile-trophy.vercel.app/?username=anthonin-tech&theme=darkhub&no-frame=true&no-bg=true&margin-w=6&column=7)
+![Trophées GitHub](./assets/trophies.svg)
 
 ## 🚀 Projets
 

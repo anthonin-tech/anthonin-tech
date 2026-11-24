@@ -6,7 +6,7 @@ on:
   workflow_dispatch:        # bouton "Run workflow" pour le lancer à la main
   push:                     # relance quand on modifie le workflow ou le générateur
     branches: [main]
-    paths: [".github/workflows/tetris.yml", "scripts/tetris.py"]
+    paths: [".github/workflows/tetris.yml", "scripts/**"]
 
 permissions:
   contents: write
@@ -25,6 +25,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/tetris.py -u "${{ github.repository_owner }}" -o assets/tetris.svg
+
+      - name: Générer les trophées
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/trophies.py -u "${{ github.repository_owner }}" -o assets/trophies.svg
 
       - name: Commit des SVG
         run: |
