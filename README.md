@@ -32,9 +32,13 @@
 ## Réseaux :
 
 <!-- Remplace les "#" par tes vrais liens -->
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-a855f7?logo=linkedin&logoColor=white)](#)
-[![Email](https://img.shields.io/badge/Email-ec4899?logo=gmail&logoColor=white)](#)
-[![Portfolio](https://img.shields.io/badge/Portfolio-c026d3?logo=googlechrome&logoColor=white)](#)
+<p align="center">
+<a href="#"><img src="https://img.shields.io/badge/LinkedIn-a855f7?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="40" /></a>
+&nbsp;
+<a href="#"><img src="https://img.shields.io/badge/Email-ec4899?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" height="40" /></a>
+&nbsp;
+<a href="#"><img src="https://img.shields.io/badge/Portfolio-c026d3?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" height="40" /></a>
+</p>
 
 ## Trophées GitHub
 
