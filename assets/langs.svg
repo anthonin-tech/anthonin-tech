@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="340" height="195" viewBox="0 0 340 195">
-<rect x=".5" y=".5" width="339" height="194" rx="4.5" fill="#0f1a16"/>
-<text x="25" y="35" font-size="18" font-weight="600" fill="#2f9e83" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">Top langages par dépôt</text>
+<rect x=".5" y=".5" width="339" height="194" rx="4.5" fill="#1a1025"/>
+<text x="25" y="35" font-size="18" font-weight="600" fill="#e879f9" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">Top langages par dépôt</text>
 <rect x="25" y="60" width="12" height="12" rx="2" fill="#3572A5"/>
 <text x="45" y="70" font-size="13" fill="#ffffff" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">Python<tspan fill="#8b949e"> 4</tspan></text>
 <rect x="25" y="83" width="12" height="12" rx="2" fill="#e34c26"/>
