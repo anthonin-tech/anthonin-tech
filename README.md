@@ -1,4 +1,4 @@
-## Salut, moi c'est **Anthonin Chesneau**
+<p align="center"><img src="./assets/banner.gif" alt="Anthonin Chesneau" width="100%" /></p>
 
 🎓 Étudiant en **BTS SIO + Bachelor Informatique** à l'**EPSI Bordeaux**
 
@@ -19,6 +19,7 @@
 <!-- Remplace les "#" par tes vrais liens -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-a855f7?logo=linkedin&logoColor=white)](#)
 [![Email](https://img.shields.io/badge/Email-ec4899?logo=gmail&logoColor=white)](#)
+[![Portfolio](https://img.shields.io/badge/Portfolio-c026d3?logo=googlechrome&logoColor=white)](#)
 
 ## Trophées GitHub
 
