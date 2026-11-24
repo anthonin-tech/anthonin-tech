@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ligne de trophées GitHub, version maison (remplace github-profile-trophy.vercel.app).
+"""Tableau de trophées GitHub en pixel-art, version maison (remplace github-profile-trophy.vercel.app).
 
 Chaque trophée reçoit un rang (SSS, SS, S, AAA, AA, A, B, C) selon des seuils
 inspirés du projet ryo-ma/github-profile-trophy. Données : API GraphQL GitHub
@@ -39,7 +39,7 @@ THRESHOLDS = {
     "Issues":     [1000, 500, 200, 100, 50, 20, 10, 1],
     "Ancienneté": [20, 15, 10, 7, 5, 3, 1, 0],
 }
-COLORS = {  # couleur de la coupe par famille de rang
+_OLD_COLORS = {  # (ancien rendu, conservé pour référence)
     "S": ("#ffd84d", "#c9a227"),
     "A": ("#e3e8ef", "#9aa4b2"),
     "B": ("#e0975b", "#a8643a"),
@@ -85,33 +85,177 @@ def unit(name, value):
     return str(value)
 
 
+# --- Rendu « tableau de badges » en pixel-art ---------------------------------
+ICONS = {  # 12x12, "#" = pixel plein, "o" = ombre
+    "Commits": [
+        "............",
+        ".##########.",
+        "##.######.##",
+        "#..######..#",
+        "##.######.##",
+        ".##########.",
+        "...######...",
+        "....####....",
+        ".....##.....",
+        ".....##.....",
+        "...######...",
+        "..oooooooo..",
+    ],
+    "Étoiles": [
+        ".....##.....",
+        ".....##.....",
+        "....####....",
+        "############",
+        ".##########.",
+        "..########..",
+        "...######...",
+        "..########..",
+        "..###..###..",
+        ".###....###.",
+        ".##......##.",
+        "............",
+    ],
+    "Abonnés": [
+        "...##..##...",
+        "..####.###..",
+        "..####.###..",
+        "...##..##...",
+        "............",
+        ".######.###.",
+        "########.###",
+        "########.###",
+        "########.###",
+        "########....",
+        "............",
+        "............",
+    ],
+    "Dépôts": [
+        "............",
+        ".####.......",
+        "#####.......",
+        "############",
+        "#..........#",
+        "#.########.#",
+        "#..........#",
+        "#.######...#",
+        "#..........#",
+        "############",
+        ".oooooooooo.",
+        "............",
+    ],
+    "Pull requests": [
+        ".##......##.",
+        "#..#....#..#",
+        "#..#....#..#",
+        ".##...#..##.",
+        ".#...###..#.",
+        ".#..#.#...#.",
+        ".#....#...#.",
+        ".#...#....#.",
+        ".#..#.....#.",
+        ".##......##.",
+        "#..#....#..#",
+        ".##......##.",
+    ],
+    "Issues": [
+        "...######...",
+        "..#......#..",
+        ".#...##...#.",
+        "#....##....#",
+        "#....##....#",
+        "#....##....#",
+        "#....##....#",
+        "#..........#",
+        "#....##....#",
+        ".#...##...#.",
+        "..#......#..",
+        "...######...",
+    ],
+    "Ancienneté": [
+        "############",
+        ".#........#.",
+        ".#.######.#.",
+        "..#.####.#..",
+        "...#.##.#...",
+        "....#..#....",
+        "....#..#....",
+        "...#....#...",
+        "..#..##..#..",
+        ".#.######.#.",
+        ".#........#.",
+        "############",
+    ],
+}
+FRAMES = {  # (cadre clair, cadre sombre, fond de carte, couleur de l'icône)
+    "S": ("#ffe46b", "#c79a12", "#2a2410", "#ffd23f"),
+    "A": ("#c9c7ff", "#6f6cd9", "#1b1d3a", "#e9e8ff"),
+    "B": ("#f0a868", "#a0522d", "#2a1a12", "#f6b37a"),
+    "?": ("#6e7681", "#30363d", "#161b22", "#8b949e"),
+}
+
+
+def pixel_icon(name, x, y, px, color):
+    out = []
+    for r, row in enumerate(ICONS[name]):
+        for c, ch in enumerate(row):
+            if ch in "#o":
+                fill = color if ch == "#" else "#000000"
+                op = "" if ch == "#" else ' opacity=".35"'
+                out.append(f'<rect x="{x + c * px}" y="{y + r * px}" width="{px}" height="{px}" '
+                           f'fill="{fill}"{op}/>')
+    return "".join(out)
+
+
+def card(name, value, r, x, y, angle):
+    fam = "S" if r.startswith("S") else "A" if r.startswith("A") else "B" if r in ("B", "C") else "?"
+    light, dark, body, icon = FRAMES[fam]
+    w, h = 96, 124
+    font = 'font-family="Courier New,Consolas,monospace"'
+    g = [f'<g transform="translate({x},{y}) rotate({angle} {w / 2} {h / 2})">',
+         # ombre portée en escalier
+         f'<rect x="5" y="5" width="{w}" height="{h}" fill="#000" opacity=".55"/>',
+         # cadre double pixelisé
+         f'<rect width="{w}" height="{h}" fill="{dark}"/>',
+         f'<rect x="3" y="3" width="{w - 6}" height="{h - 6}" fill="{light}"/>',
+         f'<rect x="6" y="6" width="{w - 12}" height="{h - 12}" fill="{body}"/>',
+         # bandeau du haut avec le rang
+         f'<rect x="6" y="6" width="{w - 12}" height="16" fill="{dark}"/>',
+         f'<text x="{w / 2}" y="18" font-size="11" font-weight="700" fill="{light}" '
+         f'text-anchor="middle" {font}>RANG {r}</text>',
+         pixel_icon(name, w / 2 - 24, 30, 4, icon),
+         # bandeau du bas : nom + valeur
+         f'<rect x="6" y="{h - 34}" width="{w - 12}" height="28" fill="{dark}" opacity=".85"/>',
+         f'<text x="{w / 2}" y="{h - 22}" font-size="9.5" font-weight="700" fill="#ffffff" '
+         f'text-anchor="middle" {font}>{name.upper()}</text>',
+         f'<text x="{w / 2}" y="{h - 10}" font-size="9.5" fill="{light}" '
+         f'text-anchor="middle" {font}>{unit(name, value)}</text>',
+         "</g>"]
+    return "".join(g)
+
+
 def build_svg(stats):
-    w, h, gap = 110, 120, 8
-    n = len(stats)
-    W = n * w + (n - 1) * gap
-    font = 'font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"'
-    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" viewBox="0 0 {W} {h}">']
-    for i, (name, value) in enumerate(stats.items()):
-        r = rank(name, value)
-        fam = "S" if r.startswith("S") else "A" if r.startswith("A") else "B" if r in ("B", "C") else "?"
-        light, dark = COLORS[fam]
-        x = i * (w + gap)
-        cx = x + w / 2
-        out.append(f'<rect x="{x + .5}" y=".5" width="{w - 1}" height="{h - 1}" rx="8" '
-                   f'fill="#0d1117" stroke="#30363d"/>')
-        # coupe
-        out.append(f'<g transform="translate({cx - 16},14)">'
-                   f'<path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="{light}"/>'
-                   f'<path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" '
-                   f'stroke="{dark}" stroke-width="2.2"/>'
-                   f'<rect x="13" y="21" width="6" height="7" fill="{dark}"/>'
-                   f'<rect x="7" y="28" width="18" height="5" rx="1.5" fill="{dark}"/></g>')
-        out.append(f'<text x="{cx}" y="70" font-size="16" font-weight="800" fill="{light}" '
-                   f'text-anchor="middle" {font}>{r}</text>')
-        out.append(f'<text x="{cx}" y="90" font-size="11" font-weight="600" fill="#c9d1d9" '
-                   f'text-anchor="middle" {font}>{name}</text>')
-        out.append(f'<text x="{cx}" y="106" font-size="11" fill="#8b949e" '
-                   f'text-anchor="middle" {font}>{unit(name, value)}</text>')
+    W, H = 760, 200
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
+           f'shape-rendering="crispEdges">',
+           '<defs><pattern id="bg" width="40" height="40" patternUnits="userSpaceOnUse">'
+           '<rect width="40" height="40" fill="#0e0f13"/>'
+           '<rect x="6" y="8" width="2" height="2" fill="#2a2d36"/>'
+           '<rect x="26" y="4" width="4" height="2" fill="#22252d"/>'
+           '<rect x="30" y="24" width="2" height="2" fill="#2a2d36"/>'
+           '<rect x="12" y="28" width="6" height="2" fill="#1d2027"/>'
+           '<rect x="14" y="26" width="2" height="6" fill="#1d2027"/>'
+           '</pattern></defs>',
+           f'<rect width="{W}" height="{H}" fill="url(#bg)"/>']
+    items = list(stats.items())
+    ranked = [(n, v, rank(n, v)) for n, v in items]
+    # les 3 plus faibles empilés à gauche comme une pile de cartes, les autres en éventail
+    order = sorted(ranked, key=lambda t: RANKS.index(t[2]) if t[2] in RANKS else 99, reverse=True)
+    stack, spread = order[:3], order[3:]
+    for i, (n, v, r) in enumerate(stack):
+        out.append(card(n, v, r, 18 + i * 22, 22 + i * 14, 0))
+    angles = [-3, 2, -2, 3, -1, 2]
+    for i, (n, v, r) in enumerate(spread):
+        out.append(card(n, v, r, 200 + i * 132, 30 + (i % 2) * 10, angles[i % len(angles)]))
     out.append("</svg>")
     return "\n".join(out)
 
