@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="818" height="120" viewBox="0 0 818 120">
+<rect x="0.5" y=".5" width="109" height="119" rx="8" fill="#0d1117" stroke="#30363d"/>
+<g transform="translate(39.0,14)"><path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="#e3e8ef"/><path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" stroke="#9aa4b2" stroke-width="2.2"/><rect x="13" y="21" width="6" height="7" fill="#9aa4b2"/><rect x="7" y="28" width="18" height="5" rx="1.5" fill="#9aa4b2"/></g>
+<text x="55.0" y="70" font-size="16" font-weight="800" fill="#e3e8ef" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">AA</text>
+<text x="55.0" y="90" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">Commits</text>
+<text x="55.0" y="106" font-size="11" fill="#8b949e" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">307</text>
+<rect x="118.5" y=".5" width="109" height="119" rx="8" fill="#0d1117" stroke="#30363d"/>
+<g transform="translate(157.0,14)"><path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="#e0975b"/><path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" stroke="#a8643a" stroke-width="2.2"/><rect x="13" y="21" width="6" height="7" fill="#a8643a"/><rect x="7" y="28" width="18" height="5" rx="1.5" fill="#a8643a"/></g>
+<text x="173.0" y="70" font-size="16" font-weight="800" fill="#e0975b" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">C</text>
+<text x="173.0" y="90" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">Étoiles</text>
+<text x="173.0" y="106" font-size="11" fill="#8b949e" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">3</text>
+<rect x="236.5" y=".5" width="109" height="119" rx="8" fill="#0d1117" stroke="#30363d"/>
+<g transform="translate(275.0,14)"><path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="#e0975b"/><path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" stroke="#a8643a" stroke-width="2.2"/><rect x="13" y="21" width="6" height="7" fill="#a8643a"/><rect x="7" y="28" width="18" height="5" rx="1.5" fill="#a8643a"/></g>
+<text x="291.0" y="70" font-size="16" font-weight="800" fill="#e0975b" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">C</text>
+<text x="291.0" y="90" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">Abonnés</text>
+<text x="291.0" y="106" font-size="11" fill="#8b949e" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">3</text>
+<rect x="354.5" y=".5" width="109" height="119" rx="8" fill="#0d1117" stroke="#30363d"/>
+<g transform="translate(393.0,14)"><path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="#e0975b"/><path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" stroke="#a8643a" stroke-width="2.2"/><rect x="13" y="21" width="6" height="7" fill="#a8643a"/><rect x="7" y="28" width="18" height="5" rx="1.5" fill="#a8643a"/></g>
+<text x="409.0" y="70" font-size="16" font-weight="800" fill="#e0975b" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">B</text>
+<text x="409.0" y="90" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">Dépôts</text>
+<text x="409.0" y="106" font-size="11" fill="#8b949e" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">10</text>
+<rect x="472.5" y=".5" width="109" height="119" rx="8" fill="#0d1117" stroke="#30363d"/>
+<g transform="translate(511.0,14)"><path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="#e3e8ef"/><path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" stroke="#9aa4b2" stroke-width="2.2"/><rect x="13" y="21" width="6" height="7" fill="#9aa4b2"/><rect x="7" y="28" width="18" height="5" rx="1.5" fill="#9aa4b2"/></g>
+<text x="527.0" y="70" font-size="16" font-weight="800" fill="#e3e8ef" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">AA</text>
+<text x="527.0" y="90" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">Pull requests</text>
+<text x="527.0" y="106" font-size="11" fill="#8b949e" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">64</text>
+<rect x="590.5" y=".5" width="109" height="119" rx="8" fill="#0d1117" stroke="#30363d"/>
+<g transform="translate(629.0,14)"><path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="#e0975b"/><path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" stroke="#a8643a" stroke-width="2.2"/><rect x="13" y="21" width="6" height="7" fill="#a8643a"/><rect x="7" y="28" width="18" height="5" rx="1.5" fill="#a8643a"/></g>
+<text x="645.0" y="70" font-size="16" font-weight="800" fill="#e0975b" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">C</text>
+<text x="645.0" y="90" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">Issues</text>
+<text x="645.0" y="106" font-size="11" fill="#8b949e" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">1</text>
+<rect x="708.5" y=".5" width="109" height="119" rx="8" fill="#0d1117" stroke="#30363d"/>
+<g transform="translate(747.0,14)"><path d="M4 0h24v10a12 12 0 0 1-24 0Z" fill="#e0975b"/><path d="M4 3H0v4a6 6 0 0 0 6 6M28 3h4v4a6 6 0 0 1-6 6" fill="none" stroke="#a8643a" stroke-width="2.2"/><rect x="13" y="21" width="6" height="7" fill="#a8643a"/><rect x="7" y="28" width="18" height="5" rx="1.5" fill="#a8643a"/></g>
+<text x="763.0" y="70" font-size="16" font-weight="800" fill="#e0975b" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">B</text>
+<text x="763.0" y="90" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">Ancienneté</text>
+<text x="763.0" y="106" font-size="11" fill="#8b949e" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">1 an</text>
+</svg>
