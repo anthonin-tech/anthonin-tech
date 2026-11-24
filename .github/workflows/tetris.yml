@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "17 3 * * *"   # tous les jours vers 4h (heure de Paris)
   workflow_dispatch:        # bouton "Run workflow" pour le lancer à la main
+  push:                     # relance aussi quand on modifie ce workflow
+    branches: [main]
+    paths: [".github/workflows/tetris.yml"]
 
 permissions:
   contents: write
