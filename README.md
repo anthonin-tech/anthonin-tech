@@ -52,8 +52,8 @@
 ## Statistiques GitHub :
 
 <p>
-<img src="./assets/langs.svg" alt="Top langages par dépôt" width="41.5%" />
-<img src="https://github-readme-stats.vercel.app/api?username=anthonin-tech&hide_border=true&bg_color=1a1025&title_color=e879f9&text_color=ffffff&ring_color=c084fc&count_private=true&include_all_commits=true" alt="Statistiques GitHub" width="57%" />
+<img src="./assets/langs.svg" alt="Top langages et frameworks" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api?username=anthonin-tech&hide_border=true&bg_color=1a1025&title_color=e879f9&text_color=ffffff&ring_color=c084fc&count_private=true&include_all_commits=true" alt="Statistiques GitHub" width="49.7%" />
 </p>
 
 ## Mes contributions
