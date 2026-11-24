@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:39d353&height=120&section=header" width="100%" alt="header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:39d353&height=200&section=header&text=Anthonin%20Chesneau&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%C3%89tudiant%20BTS%20SIO%20%2B%20Bachelor%20Informatique%20%C2%B7%20EPSI%20Bordeaux&descAlignY=58&descSize=18" width="100%" alt="header" />
 
 <img src="https://komarev.com/ghpvc/?username=anthonin-tech&label=Visiteurs+du+profil&color=39d353&style=for-the-badge" alt="Profile views" />
 <img src="https://img.shields.io/github/followers/anthonin-tech?label=Followers&style=for-the-badge&color=39d353&logo=github" alt="Followers" />
