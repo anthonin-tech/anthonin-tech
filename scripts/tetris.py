@@ -21,11 +21,9 @@ import urllib.request
 # --- Apparence ---------------------------------------------------------------
 CELL, GAP = 11, 3
 STEP = CELL + GAP
-LEFT, TOP = 34, 26          # place pour les jours et les mois
-BOTTOM, RIGHT = 22, 10
-BG = "#0d1117"
+LEFT, TOP = 2, 2            # juste les cases, sans libellés
+BOTTOM, RIGHT = 0, 0
 EMPTY = "#161b22"
-TEXT = "#8b949e"
 LEVELS = {  # couleurs GitHub (thème sombre)
     "FIRST_QUARTILE": "#0e4429",
     "SECOND_QUARTILE": "#006d32",
@@ -35,10 +33,10 @@ LEVELS = {  # couleurs GitHub (thème sombre)
 TETRIS = ["#00f0f0", "#f0f000", "#a000f0", "#00f000", "#f00000", "#0000f0", "#f0a000"]
 
 # --- Timing (secondes) -------------------------------------------------------
-FALL = 0.55       # durée de chute d'une pièce
-HOLD = 4.0        # pause sur le graphe complet
-FLASH = 0.9       # "ligne complète" : clignote puis disparaît
-PAUSE = 0.6       # vide avant de recommencer
+FALL = 0.3        # durée de chute d'une pièce
+HOLD = 2.0        # pause sur le graphe complet
+FLASH = 0.6       # "ligne complète" : clignote puis disparaît
+PAUSE = 0.3       # vide avant de recommencer
 
 QUERY = """
 query($login: String!) {
@@ -119,21 +117,8 @@ def build_svg(weeks, total, login):
     grid_h = 7 * STEP
 
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-           f'viewBox="0 0 {width} {height}" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">',
-           f'<rect width="100%" height="100%" rx="6" fill="{BG}"/>']
-
-    # libellés des mois (au premier dimanche du mois)
-    last_month = None
-    for i, wk in enumerate(weeks):
-        first = dt.date.fromisoformat(wk["contributionDays"][0]["date"])
-        if first.month != last_month and first.day <= 7 and i < n_weeks - 2:
-            out.append(f'<text x="{LEFT + i * STEP}" y="{TOP - 9}" font-size="10" fill="{TEXT}">'
-                       f'{first.strftime("%b")}</text>')
-        last_month = first.month if first.day <= 7 else last_month
-    for d, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
-        out.append(f'<text x="4" y="{TOP + d * STEP + 9}" font-size="10" fill="{TEXT}">{name}</text>')
-    out.append(f'<text x="{width - RIGHT}" y="{height - 7}" font-size="10" fill="{TEXT}" '
-               f'text-anchor="end">{total} contributions · @{login}</text>')
+           f'viewBox="0 0 {width} {height}">',
+           ]
 
     # grille vide + cases actives
     active = {}
@@ -146,7 +131,7 @@ def build_svg(weeks, total, login):
 
     pieces = make_pieces(active)
     n = max(len(pieces), 1)
-    build = min(max(n * 0.11, 8.0), 22.0)       # durée de construction totale
+    build = min(max(n * 0.045, 3.5), 9.0)       # durée de construction totale
     interval = (build - FALL) / max(n - 1, 1)
     total_t = build + HOLD + FLASH + PAUSE
     pct = lambda t: f"{100 * t / total_t:.3f}%"
@@ -187,7 +172,7 @@ def build_svg(weeks, total, login):
                     f'<g class="p" style="animation-name:{k[1]}">{color}</g></g>')
     body.append("</g></g>")
 
-    out.insert(2, "<style>" + "".join(css) + "</style>")
+    out.insert(1, "<style>" + "".join(css) + "</style>")
     out.extend(body)
     out.append("</svg>")
     return "\n".join(out)
