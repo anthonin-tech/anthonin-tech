@@ -12,7 +12,7 @@ import math
 import os
 import urllib.request
 
-BG, TITLE, TEXT = "#0f1a16", "#2f9e83", "#ffffff"
+BG, TITLE, TEXT = "#1a1025", "#e879f9", "#ffffff"
 MAX_LANGS = 5
 
 QUERY = """

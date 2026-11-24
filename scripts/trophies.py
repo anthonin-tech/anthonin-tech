@@ -187,9 +187,9 @@ ICONS = {  # 12x12, "#" = pixel plein, "o" = ombre
     ],
 }
 FRAMES = {  # (cadre clair, cadre sombre, fond de carte, couleur de l'icône)
-    "S": ("#ffe46b", "#c79a12", "#2a2410", "#ffd23f"),
-    "A": ("#c9c7ff", "#6f6cd9", "#1b1d3a", "#e9e8ff"),
-    "B": ("#f0a868", "#a0522d", "#2a1a12", "#f6b37a"),
+    "S": ("#f9a8d4", "#be185d", "#2a0f22", "#fbcfe8"),
+    "A": ("#d8b4fe", "#7e22ce", "#1e1030", "#f3e8ff"),
+    "B": ("#f0abfc", "#a21caf", "#250d26", "#f5d0fe"),
     "?": ("#6e7681", "#30363d", "#161b22", "#8b949e"),
 }
 
@@ -238,12 +238,12 @@ def build_svg(stats):
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
            f'shape-rendering="crispEdges">',
            '<defs><pattern id="bg" width="40" height="40" patternUnits="userSpaceOnUse">'
-           '<rect width="40" height="40" fill="#0e0f13"/>'
-           '<rect x="6" y="8" width="2" height="2" fill="#2a2d36"/>'
-           '<rect x="26" y="4" width="4" height="2" fill="#22252d"/>'
-           '<rect x="30" y="24" width="2" height="2" fill="#2a2d36"/>'
-           '<rect x="12" y="28" width="6" height="2" fill="#1d2027"/>'
-           '<rect x="14" y="26" width="2" height="6" fill="#1d2027"/>'
+           '<rect width="40" height="40" fill="#120d18"/>'
+           '<rect x="6" y="8" width="2" height="2" fill="#2e2140"/>'
+           '<rect x="26" y="4" width="4" height="2" fill="#261a35"/>'
+           '<rect x="30" y="24" width="2" height="2" fill="#2e2140"/>'
+           '<rect x="12" y="28" width="6" height="2" fill="#22182e"/>'
+           '<rect x="14" y="26" width="2" height="6" fill="#22182e"/>'
            '</pattern></defs>',
            f'<rect width="{W}" height="{H}" fill="url(#bg)"/>']
     items = list(stats.items())

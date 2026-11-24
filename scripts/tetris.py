@@ -23,14 +23,14 @@ CELL, GAP = 11, 3
 STEP = CELL + GAP
 LEFT, TOP = 2, 2            # juste les cases, sans libellés
 BOTTOM, RIGHT = 0, 0
-EMPTY = "#161b22"
-LEVELS = {  # couleurs GitHub (thème sombre)
-    "FIRST_QUARTILE": "#0e4429",
-    "SECOND_QUARTILE": "#006d32",
-    "THIRD_QUARTILE": "#26a641",
-    "FOURTH_QUARTILE": "#39d353",
+EMPTY = "#1e1528"
+LEVELS = {  # dégradé violet -> rose
+    "FIRST_QUARTILE": "#4c1d6b",
+    "SECOND_QUARTILE": "#7e22ce",
+    "THIRD_QUARTILE": "#c026d3",
+    "FOURTH_QUARTILE": "#f472b6",
 }
-TETRIS = ["#00f0f0", "#f0f000", "#a000f0", "#00f000", "#f00000", "#0000f0", "#f0a000"]
+TETRIS = ["#f472b6", "#e879f9", "#c084fc", "#a78bfa", "#f9a8d4", "#d946ef", "#8b5cf6"]
 
 # --- Timing (secondes) -------------------------------------------------------
 FALL = 0.3        # durée de chute d'une pièce

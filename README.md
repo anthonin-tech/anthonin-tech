@@ -17,8 +17,8 @@
 ## Réseaux :
 
 <!-- Remplace les "#" par tes vrais liens -->
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](#)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](#)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-a855f7?logo=linkedin&logoColor=white)](#)
+[![Email](https://img.shields.io/badge/Email-ec4899?logo=gmail&logoColor=white)](#)
 
 ## Trophées GitHub
 
@@ -33,7 +33,7 @@
 
 <p>
 <img src="./assets/langs.svg" alt="Top langages par dépôt" width="41.5%" />
-<img src="https://github-readme-stats.vercel.app/api?username=anthonin-tech&hide_border=true&bg_color=0f1a16&title_color=2f9e83&text_color=ffffff&ring_color=2f9e83&count_private=true&include_all_commits=true" alt="Statistiques GitHub" width="57%" />
+<img src="https://github-readme-stats.vercel.app/api?username=anthonin-tech&hide_border=true&bg_color=1a1025&title_color=e879f9&text_color=ffffff&ring_color=c084fc&count_private=true&include_all_commits=true" alt="Statistiques GitHub" width="57%" />
 </p>
 
 ## Mes contributions
