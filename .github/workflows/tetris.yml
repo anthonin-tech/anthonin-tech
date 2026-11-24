@@ -1,4 +1,4 @@
-name: Animations contributions
+name: Tetris contributions
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:        # bouton "Run workflow" pour le lancer à la main
   push:                     # relance quand on modifie le workflow ou le générateur
     branches: [main]
-    paths: [".github/workflows/animations.yml", "scripts/**"]
+    paths: [".github/workflows/tetris.yml", "scripts/tetris.py"]
 
 permissions:
   contents: write
@@ -21,20 +21,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Générer les animations
+      - name: Générer le Tetris
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/arcade.py -u "${{ github.repository_owner }}" --out-dir assets
-
-      - name: Générer le tableau de bord (métriques maison)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/metrics.py -u "${{ github.repository_owner }}" -o assets/metrics.svg
+        run: python scripts/tetris.py -u "${{ github.repository_owner }}" -o assets/tetris.svg
 
       - name: Commit des SVG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A assets
-          git diff --cached --quiet || git commit -m "🎮 Update animations"
+          git diff --cached --quiet || git commit -m "🧱 Update Tetris"
           git push
