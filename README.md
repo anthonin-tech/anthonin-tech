@@ -20,6 +20,10 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](#)
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](#)
 
+## 🏆 Trophées GitHub
+
+![Trophées GitHub](https://github-profile-trophy.vercel.app/?username=anthonin-tech&theme=darkhub&no-frame=true&no-bg=true&margin-w=6&column=7)
+
 ## 🚀 Projets
 
 [![CodeQuest](./assets/codequest.svg)](https://github.com/anthonin-tech/CodeQuest)
@@ -31,10 +35,7 @@
 
 ## 📊 Statistiques GitHub :
 
-![Stats GitHub](https://github-readme-stats.vercel.app/api?username=anthonin-tech&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=39d353&icon_color=39d353&text_color=c9d1d9&count_private=true&include_all_commits=true&custom_title=Statistiques%20GitHub%20d%27Anthonin)
-![Top langages](https://github-readme-stats.vercel.app/api/top-langs/?username=anthonin-tech&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=39d353&text_color=c9d1d9&langs_count=6)
-
-![Série de contributions](https://streak-stats.demolab.com/?user=anthonin-tech&theme=github-dark-blue&hide_border=true&background=0d1117&ring=39d353&fire=39d353&currStreakLabel=39d353&sideNums=39d353&dates=8b949e)
+![Statistiques GitHub](https://github-readme-stats.vercel.app/api?username=anthonin-tech&hide_border=true&bg_color=0f1a16&title_color=2f9e83&text_color=ffffff&ring_color=2f9e83&count_private=true&include_all_commits=true)
 
 ## 🧱 Mes contributions
 
