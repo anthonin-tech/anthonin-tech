@@ -10,13 +10,10 @@
 
 <br/>
 
-## 👤 À propos de moi
+## À propos de moi
 
-- 🔭 Travaille actuellement sur **Studex**, **CodeQuest** et un **dashboard perso en Flutter**
-- 🌱 Approfondit Vue.js/TypeScript et l'administration de bases SQL Server
-- 👯 Ouvert à toute collaboration sur un projet web ou un projet lié au rugby/sport-tech
-- 💬 Discutons LAMP, WordPress, Vue.js/TypeScript, FastAPI, Docker ou Linux
-- ⚡ Fun fact : je combine code et rugby, avec l'UBB en ligne de mire
+- Travaille actuellement sur **Studex**
+- Approfondit ma compréhension du code et le développement front-end et back-end
 
 <div align="center">
 
@@ -27,7 +24,7 @@
 
 </div>
 
-## 🛠️ Stack technique
+## Stack technique
 
 <div align="center">
 
@@ -43,7 +40,7 @@
 
 </div>
 
-## 📊 Statistiques GitHub
+## Statistiques GitHub
 
 <div align="center">
 
@@ -54,7 +51,7 @@
 
 </div>
 
-## 📌 Quelques projets
+## Quelques projets
 
 <div align="center">
 
@@ -64,7 +61,7 @@
 
 </div>
 
-## 🧱 Mes contributions en Tetris
+## Mes contributions en Tetris
 
 <p align="center"><img src="./assets/tetris.svg" alt="Tetris" /></p>
 
