@@ -1,10 +1,25 @@
 <p align="center"><img src="./assets/banner.gif" alt="Anthonin Chesneau" width="100%" /></p>
 
-🎓 Étudiant en **BTS SIO + Bachelor Informatique** à l'**EPSI Bordeaux**
+## À propos de moi
 
-- 🔭 *Je travaille actuellement sur :* **Studex**
-- 🌱 *J'approfondis :* ma compréhension du code et le développement front-end et back-end
-- 🏉 *Fun fact :* je combine code et rugby
+<table>
+<tr>
+<td width="38%" align="center">
+<img src="./assets/about.png" alt="Avatar" width="100%" />
+</td>
+<td>
+
+### 🎓 Étudiant en **BTS SIO + Bachelor Informatique** à l'**EPSI Bordeaux**
+
+### 🔭 Je travaille actuellement sur **Studex**
+
+### 🌱 J'approfondis ma compréhension du code et le développement front-end et back-end
+
+### 🏉 Je combine code et rugby
+
+</td>
+</tr>
+</table>
 
 ## Tech Stack :
 
