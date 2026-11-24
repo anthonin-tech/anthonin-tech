@@ -56,7 +56,7 @@ Approfondit ma compréhension du code et le développement front-end et back-end
 
 <br/>
 
-<h2 align="center">Mes contributions en Tetris</h2>
+<h2 align="center">Mes contributions</h2>
 
 <p align="center"><img src="./assets/tetris.svg" alt="Contributions en Tetris" /></p>
 
