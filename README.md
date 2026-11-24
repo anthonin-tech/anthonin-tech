@@ -49,28 +49,10 @@ Approfondit ma compréhension du code et le développement front-end et back-end
 
 <h2 align="center">Projets</h2>
 
-<table align="center">
-<tr>
-<td align="center" width="50%" valign="top">
-<a href="https://github.com/anthonin-tech/CodeQuest"><img src="https://github-readme-stats.vercel.app/api/pin/?username=anthonin-tech&repo=CodeQuest&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=39d353&icon_color=39d353&text_color=c9d1d9" alt="CodeQuest" height="140" /></a>
-<br/><br/>
-<b>CodeQuest</b>
-<br/>
-Plateforme qui gamifie l'apprentissage du code : un tuteur IA guide l'élève par indices progressifs, sans jamais donner la réponse.
-<br/>
-<sub>Vue.js 3 · TypeScript · Nuxt · Pinia · CodeMirror</sub>
-</td>
-<td align="center" width="50%" valign="top">
-<a href="https://github.com/Maelys-B/Studex"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Maelys-B&repo=Studex&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=39d353&icon_color=39d353&text_color=c9d1d9" alt="Studex" height="140" /></a>
-<br/><br/>
-<b>Studex</b>
-<br/>
-Jeu de cartes en ligne sur le thème des études : chaque étudiant crée sa carte, l'ajoute au jeu et affronte les autres en combats au tour par tour, avec des ligues par école.
-<br/>
-<sub>React · TypeScript · Express</sub>
-</td>
-</tr>
-</table>
+<p align="center">
+<a href="https://github.com/anthonin-tech/CodeQuest"><img src="./assets/codequest.svg" alt="CodeQuest" height="156" /></a>
+<a href="https://github.com/Maelys-B/Studex"><img src="./assets/studex.svg" alt="Studex" height="156" /></a>
+</p>
 
 <br/>
 
