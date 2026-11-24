@@ -5,7 +5,7 @@
 <table>
 <tr>
 <td width="38%" align="center">
-<img src="./assets/about.png" alt="Avatar" width="100%" />
+<img src="./assets/about.gif" alt="Ballon de rugby" width="100%" />
 </td>
 <td>
 
