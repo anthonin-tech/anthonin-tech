@@ -9,13 +9,13 @@
 </td>
 <td>
 
-### 🎓 Étudiant en **BTS SIO + Bachelor Informatique** à l'**EPSI Bordeaux**
+### Étudiant en **BTS SIO + Bachelor Informatique** à l'**EPSI Bordeaux**
 
-### 🔭 Je travaille actuellement sur **Studex**
+### Je travaille actuellement sur **Studex**
 
-### 🌱 J'approfondis ma compréhension du code et le développement front-end et back-end
+### J'approfondis ma compréhension du code et le développement front-end et back-end
 
-### 🏉 Je combine code et rugby
+### Je combine code et rugby
 
 </td>
 </tr>
