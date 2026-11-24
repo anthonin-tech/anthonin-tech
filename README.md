@@ -12,14 +12,6 @@
 
 ## 👤 À propos de moi
 
-```yaml
-anthonin:
-  études: "Bachelor SIN + BTS SIO (double cursus) — EPSI Bordeaux"
-  rôles: ["Délégué de classe", "Ambassadeur de l'école depuis 2025"]
-  objectif: "Rejoindre l'IT de l'Union Bordeaux Bègles (rugby + tech)"
-  stack: [LAMP, WordPress, "Vue.js/TypeScript", FastAPI, Docker, Linux, Java]
-```
-
 - 🔭 Travaille actuellement sur **Studex**, **CodeQuest** et un **dashboard perso en Flutter**
 - 🌱 Approfondit Vue.js/TypeScript et l'administration de bases SQL Server
 - 👯 Ouvert à toute collaboration sur un projet web ou un projet lié au rugby/sport-tech
