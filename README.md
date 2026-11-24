@@ -4,4 +4,4 @@
 
 ### 🧱 Mes contributions en Tetris
 
-![Mes contributions GitHub en Tetris](./assets/tetris.gif)
+![Mes contributions GitHub en Tetris](./assets/tetris.svg)
