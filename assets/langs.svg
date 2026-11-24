@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="195" viewBox="0 0 340 195">
+<rect x=".5" y=".5" width="339" height="194" rx="4.5" fill="#0f1a16"/>
+<text x="25" y="35" font-size="18" font-weight="600" fill="#2f9e83" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">Top langages par dépôt</text>
+<rect x="25" y="60" width="12" height="12" rx="2" fill="#3572A5"/>
+<text x="45" y="70" font-size="13" fill="#ffffff" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">Python<tspan fill="#8b949e"> 4</tspan></text>
+<rect x="25" y="83" width="12" height="12" rx="2" fill="#e34c26"/>
+<text x="45" y="93" font-size="13" fill="#ffffff" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">HTML<tspan fill="#8b949e"> 1</tspan></text>
+<rect x="25" y="106" width="12" height="12" rx="2" fill="#f1e05a"/>
+<text x="45" y="116" font-size="13" fill="#ffffff" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">JavaScript<tspan fill="#8b949e"> 1</tspan></text>
+<rect x="25" y="129" width="12" height="12" rx="2" fill="#3178c6"/>
+<text x="45" y="139" font-size="13" fill="#ffffff" font-family="Segoe UI,Ubuntu,-apple-system,Helvetica,Arial,sans-serif">TypeScript<tspan fill="#8b949e"> 1</tspan></text>
+<circle cx="255" cy="112" r="46" fill="none" stroke="#3572A5" stroke-width="22" stroke-dasharray="165.16 123.87" stroke-dashoffset="-0.00" transform="rotate(-90 255 112)"/>
+<circle cx="255" cy="112" r="46" fill="none" stroke="#e34c26" stroke-width="22" stroke-dasharray="41.29 247.74" stroke-dashoffset="-165.16" transform="rotate(-90 255 112)"/>
+<circle cx="255" cy="112" r="46" fill="none" stroke="#f1e05a" stroke-width="22" stroke-dasharray="41.29 247.74" stroke-dashoffset="-206.45" transform="rotate(-90 255 112)"/>
+<circle cx="255" cy="112" r="46" fill="none" stroke="#3178c6" stroke-width="22" stroke-dasharray="41.29 247.74" stroke-dashoffset="-247.74" transform="rotate(-90 255 112)"/>
+</svg>
