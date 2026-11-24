@@ -93,6 +93,13 @@ anthonin:
 
 </div>
 
+## 📈 Tableau de bord (métriques maison)
+
+<div align="center">
+<sub>L'équivalent fait maison de l'outil <code>lowlighter/metrics</code> : profil, stats rapides, langages, heures d'activité, contributions notables et dépôts les plus étoilés — généré par <a href="./scripts/metrics.py"><code>scripts/metrics.py</code></a>, sans jeton ni accès externe.</sub>
+</div>
+<p align="center"><img src="./assets/metrics.svg" alt="Tableau de bord" /></p>
+
 ## 💬 Citation du jour
 
 <div align="center">
@@ -144,8 +151,9 @@ Ces extras existent dans l'écosystème des profils GitHub mais demandent soit u
 | **Spotify Now Playing** | Le morceau que tu écoutes en direct | Une appli Spotify (OAuth) + une Action GitHub avec tes clés |
 | **Blog posts (RSS)** | Tes derniers articles de blog affichés automatiquement | Un blog avec un flux RSS |
 | **Discord Presence** | Ton statut Discord en direct | Un bot Discord à héberger |
-| **Métriques avancées (lowlighter/metrics)** | Dizaines de graphiques (langages, habitudes, PR, issues…) en une image | Une Action GitHub tierce avec accès en écriture |
 | **Repos épinglés natifs** | 6 cartes de dépôts en haut de ton profil | Se fait dans GitHub, pas dans ce README : « Customize your pins » sur ta page de profil |
+| **Succès GitHub (badges Pull Shark, Galaxy Brain…)** | Les trophées officiels affichés sur ton profil | Non récupérables par API : seul GitHub les calcule, impossible à reproduire en script |
+| **Métriques avancées version officielle (`lowlighter/metrics`)** | Encore plus de plugins (sponsors, discussions, gists…) | Projet à l'arrêt depuis fin 2023 + exige un jeton personnel créé par toi — on a préféré la version maison ci-dessus |
 
 Si l'un de ces extras t'intéresse, dis-le-moi : je peux préparer le bloc markdown prêt à coller, ou te guider pour la configuration du compte externe nécessaire.
 

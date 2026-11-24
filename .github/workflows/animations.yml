@@ -26,6 +26,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/arcade.py -u "${{ github.repository_owner }}" --out-dir assets
 
+      - name: Générer le tableau de bord (métriques maison)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/metrics.py -u "${{ github.repository_owner }}" -o assets/metrics.svg
+
       - name: Commit des SVG
         run: |
           git config user.name "github-actions[bot]"
