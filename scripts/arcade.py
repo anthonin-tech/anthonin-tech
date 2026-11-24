@@ -8,6 +8,7 @@ Fichiers produits (dans --out-dir) :
   breakout.svg  casse-briques : la balle détruit les contributions
   shooter.svg   space shooter : un vaisseau tire sur les contributions
   3d.svg        graphe 3D isométrique qui pousse en vague
+  life.svg      jeu de la vie de Conway initialisé avec les contributions
 
 Aucune dépendance externe. Usage :
   GITHUB_TOKEN=... python scripts/arcade.py -u anthonin-tech --out-dir assets
@@ -348,6 +349,65 @@ def iso3d(weeks):
     return "\n".join(out)
 
 
+# --- Jeu de la vie (Conway) ----------------------------------------------------
+def life(weeks, generations=26, step=0.5):
+    all_c = cells(weeks)
+    n_weeks = len(weeks)
+    colors = {(w, d): c for w, d, c, _ in all_c if c}
+    alive = set(colors)
+
+    def neighbours(w, d):
+        for dw in (-1, 0, 1):
+            for dd in (-1, 0, 1):
+                if dw or dd:
+                    yield w + dw, d + dd
+
+    frames = [alive]
+    for _ in range(generations - 1):
+        counts = {}
+        for w, d in frames[-1]:
+            for nb in neighbours(w, d):
+                counts[nb] = counts.get(nb, 0) + 1
+        nxt = {c for c, n in counts.items() if n == 3} | \
+              {c for c in frames[-1] if counts.get(c, 0) in (2, 3)}
+        nxt = {(w, d) for w, d in nxt if 0 <= w < n_weeks and 0 <= d < 7}
+        frames.append(nxt)
+        if nxt == frames[-2]:   # figure stable : pas la peine de continuer à vide
+            break
+
+    T = len(frames) * step
+    css = base_css(T)
+    born_color = "#39d353"
+    out_cells = []
+    for w in range(n_weeks):
+        for d in range(7):
+            seen = [i for i, f in enumerate(frames) if (w, d) in f]
+            if not seen:
+                continue
+            color = colors.get((w, d), born_color)
+            x, y = xy(w, d)
+            kf = [f"0%{{opacity:0}}"]
+            prev_alive = False
+            for i in range(len(frames)):
+                alive_now = (w, d) in frames[i]
+                if alive_now != prev_alive:
+                    kf.append(f"{P(i * step, T)}{{opacity:{1 if alive_now else 0}}}")
+                prev_alive = alive_now
+            kf.append(f"100%{{opacity:{1 if prev_alive else 0}}}")
+            name = f"l{w}_{d}"
+            css.append(f"@keyframes {name}{{{''.join(kf)}}}")
+            out_cells.append(f'<rect class="a" style="animation-name:{name}" x="{x}" y="{y}" '
+                             f'width="{CELL}" height="{CELL}" rx="2" fill="{color}"/>')
+
+    width = M * 2 + n_weeks * STEP - (STEP - CELL)
+    height = M * 2 + 7 * STEP - (STEP - CELL)
+    out = svg_open(width, height, css)
+    out.append(empty_grid(all_c))
+    out.extend(out_cells)
+    out.append("</svg>")
+    return "\n".join(out)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("-u", "--user", default=os.environ.get("GITHUB_REPOSITORY_OWNER", "octocat"))
@@ -369,6 +429,7 @@ def main():
         "breakout.svg": breakout(weeks),
         "shooter.svg": shooter(weeks),
         "3d.svg": iso3d(weeks),
+        "life.svg": life(weeks),
     }
     for name, svg in outputs.items():
         with open(os.path.join(a.out_dir, name), "w", encoding="utf-8") as f:
